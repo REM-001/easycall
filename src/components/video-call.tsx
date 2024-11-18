@@ -71,7 +71,7 @@ const VideoCall = ({ roomId }: Props) => {
   },[roomId, username]);
 
   return (
-    <div ref={containerRef} className='h-screen w-full' />
+    <div ref={containerRef} className='h-screen w-full bg-gradient-to-b from-zinc-800 to-zinc-900' />
   )
 };
 
