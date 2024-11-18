@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
 import { useSearchParams } from 'next/navigation';
 
@@ -14,7 +14,7 @@ import React from 'react'
 
 const VideoCall = ({ roomId }: Props) => {
 
-  const zegoRef = useRef<any>(null);
+  const zegoRef = useRef<ZegoUIKitPrebuilt | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const searchParams = useSearchParams();
@@ -49,7 +49,7 @@ const VideoCall = ({ roomId }: Props) => {
         scenario: {
           mode: ZegoUIKitPrebuilt.GroupCall,
         },
-        sharedLink: [
+        sharedLinks: [
           {
             name: "Sharable Link",
             url: `${window.location.protocol}//

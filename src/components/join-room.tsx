@@ -62,9 +62,10 @@ const JoinRoom = () => {
                     className='px-4 h-10 rounedd-md border
                     border-zinc-300 rounded-md focus:outline-none
                     focus:border-indigo-500 w-full'
+                    required
                 />
             </div>
-            <div className='space-y-4'>
+            <div className='join-room space-y-4'>
                 <button type='submit' className='mt-4 w-full px-4 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-indigo-700 text-white
                 hover:from-cyan-400 hover:to-indigo-500 font-medium transition-all focus:outline-none focus:ring-2 focus:ring-indigo-400
                 focus:ring-opacity-75 disabled:opacity-50'>
