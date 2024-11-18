@@ -21,6 +21,13 @@ const VideoCall = ({ roomId }: Props) => {
   const username = searchParams.get('username') || 'Anonymous';
 
   useEffect(() => {
+    console.log({
+      appId: process.env.NEXT_PUBLIC_ZEGOCLOUD_APP_ID,
+      serverSecret: process.env.NEXT_PUBLIC_ZEGOCLOUD_APP_SERVER_SECRET
+    });
+  }, []);
+
+  useEffect(() => {
     const appID = parseInt(process.env.NEXT_PUBLIC_ZEGOCLOUD_APP_ID!);
     const serverSecret = process.env.NEXT_PUBLIC_ZEGOCLOUD_APP_SERVER_SECRET!;
 
